@@ -1,3 +1,3 @@
-module github.com/mrumyantsev/dailyt
+module github.com/mrumyantsev/dailystart
 
 go 1.15

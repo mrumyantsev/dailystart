@@ -1,6 +1,6 @@
-# Dailyt
+# Dailystart
 
-**Dailyt** is a Go library, that provides a functions for starting a daily task (or routine) on the particular time of the day.
+**Dailystart** is a Go library, that provides a functions for starting a daily task (or routine) on the particular time of the day.
 
 ## Usage
 
@@ -11,11 +11,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mrumyantsev/dailyt"
+	"github.com/mrumyantsev/dailystart"
 )
 
 func main() {
-	// A daily time for starting the task.
+	// A day time for starting a daily task.
 	dailyTaskTime := "14:36:30"
 
 	// Visual time printer.
@@ -26,15 +26,16 @@ func main() {
 		}
 	}()
 
-	// An infinite loop, which provides daily task launch.
+	// An infinite loop, which provides daily task starting.
 	for {
-		dailyt.SleepUntil(dailyTaskTime)
+		dailystart.SleepUntil(dailyTaskTime)
 
 		task()
 	}
 }
 
 func task() {
-	fmt.Println("Task has been launched!")
+	fmt.Println("Task started")
 }
+
 ```

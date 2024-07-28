@@ -1,9 +1,9 @@
-package dailyt
+package dailystart
 
 import "time"
 
-// SleepUntil sleeps until next daily task launch. It is a shorthand
-// for calling time.Sleep function with the value from dailyt.Delay
+// SleepUntil sleeps until next daily task start. It is a shorthand for
+// calling time.Sleep function with the value from dailystart.Delay
 // function.
 func SleepUntil(dailyTime string) {
 	delay := Delay(dailyTime)
@@ -11,9 +11,9 @@ func SleepUntil(dailyTime string) {
 	time.Sleep(delay)
 }
 
-// Delay gets a time duration before next daily task launch. A given
+// Delay gets a time duration before next daily task start. A given
 // dailyTime string parameter must fit following date format:
-// "15:04:05", otherwize it will cause panic.
+// "15:04:05", otherwise it will raise panic.
 func Delay(dailyTime string) time.Duration {
 	now := time.Now()
 	nowYear, nowMonth, nowDay := now.Date()
